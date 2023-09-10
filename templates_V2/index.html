@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Segmentation Mask Prediction</title>
+</head>
+<body>
+    <h1>Segmentation Mask Prediction</h1>
+    <form action="/predict_mask" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <input type="submit" value="Predict Mask">
+    </form>
+    <h2>Original Image:</h2>
+    <img src="{{ original_image }}" width="512" height="256">
+    <h2>Predicted Mask:</h2>
+    <img src="{{ predicted_mask }}" width="512" height="256">
+    <h2>Real Mask:</h2>
+    <img src="{{ real_mask }}" width="512" height="256">
+</body>
+</html>
